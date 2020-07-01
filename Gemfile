@@ -49,12 +49,12 @@ group :development, :test do
   gem 'pry-rails'
   gem 'compass-rails', '3.1.0'
   gem 'sprockets', '3.7.2'
-  gem 'devise'
   gem 'kaminari'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'capybara', '>= 2.15'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -73,3 +73,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :production do
+  gem 'pg'
+end
+
+gem 'devise'
